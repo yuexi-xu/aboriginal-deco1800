@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <title>Puzzle</title>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/puzzle.css">
+    <script type="text/javascript" src="js/filter.js"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <ul class="header_ul">
+            <li class="burger">
+                <div class="menu" onclick="openHamburger(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </li>
+            <li>
+                <a>
+                    <h2>Sliding Puzzle</h2>
+                </a>
+            </li>
+        </ul>
+    </header>
+        
+    <aside id="hamburger_ul" class="hamburger_side">
+        <p>Dictionary</p>
+        <input type="text" id="search_bar" onkeyup="searchWord()" placeholder="Search for words...">
+        <ul id="words_list"></ul>
+    </aside>
+
+    <div id="container">
+        <div id="title">
+            <rowspan id='animal_name'>mirri</rowspan>
+        </div>
+        <main>
+            <div id="game">
+                <div id="d1" onclick="move(1)" style="background-image: url(images/dingo/image_part_001.jpg);">1</div>
+                <div id="d2" onclick="move(2)" style="background-image: url(images/dingo/image_part_002.jpg);">2</div>
+                <div id="d3" onclick="move(3)" style="background-image: url(images/dingo/image_part_003.jpg);">3</div>
+                <div id="d4" onclick="move(4)" style="background-image: url(images/dingo/image_part_004.jpg);">4</div>
+                <div id="d5" onclick="move(5)" style="background-image: url(images/dingo/image_part_005.jpg);">5</div>
+                <div id="d6" onclick="move(6)" style="background-image: url(images/dingo/image_part_006.jpg);">6</div>
+                <div id="d7" onclick="move(7)" style="background-image: url(images/dingo/image_part_007.jpg);">7</div>
+                <div id="d8" onclick="move(8)" style="background-image: url(images/dingo/image_part_008.jpg);">8</div>
+            </div>
+        </main>
+        
+        <div id="control">
+            <p>
+                <rowspan id="timeText">ALL TIME</rowspan>
+                <hr>
+                <rowspan id="timer"></rowspan>
+            </p>
+            <p>
+                <rowspan id="start" onclick="start()">START/PAUSE</rowspan>
+                <rowspan id="reset" onclick="reset()">RESTART</rowspan>
+                <rowspan id="skip" onclick="skip()">SKIP</rowspan>
+            </p>
+        </div>
+       
+        <div id="final_pop_up">
+            <h1 id="ftitle">Congratulations!</h1>
+            <h3 id="fcontent"></h3>
+            <button id="fbtn" onclick="toFinal()">Check Results</button>
+        </div>
+    </div>
+    
+    <!-- <script src="js/guessword.js"></script> -->
+    <script type="text/javascript" src="js/puzzle.js"></script>
+</body>
+</html>

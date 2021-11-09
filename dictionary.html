@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Dictionary</title>
+        <link rel="stylesheet" href="css/dictionary_style.css">
+        <script type="text/javascript" src="https://rawcdn.githack.com/tobiasmuehl/instascan/4224451c49a701c04de7d0de5ef356dc1f701a93/bin/instascan.min.js"></script>
+        <script src="http://code.jquery.com/jquery.min.js"></script>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    </head>
+    <body>
+        <form id="warn">
+            <h1>For optimal experience, please view in portrait mode!</h1>
+        </form>
+
+        <div id="congrat_form">
+                <h2 id="title"></h2>
+                <h4 id="congratTxt">You just captured a new word!</h4>
+                <button type="button" onclick="closeForm()">Close</button>
+        </div>
+
+        <div id="scanner_container">
+            <video id="preview"></video>
+            <button type="button" id="switch" onclick="controlcam()">On / Off</button>
+            <button type="button" id="next" onclick="nextbtn()">I'm ready</button>
+            
+        </div>
+        <hr/>
+
+        <h1>Dictionary</h1>
+        <input type="text" id="search_bar" onkeyup="searchWord()" placeholder="Search for words...">
+        <div class="dictionary">
+            <ul id="words_list" class="list">
+                <li>
+                </li>
+            </ul>
+        </div>
+
+        <script type="text/javascript" src="/js/filter.js"></script>
+        <script type="text/javascript" src="/js/dictionary.js"></script>
+    </body>
+</html>

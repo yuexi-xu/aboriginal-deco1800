@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>Welcome to the aboriginal exhibition</title>
+        <link rel="stylesheet" href="css/welcome_page.css">
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <div id='main'>
+            <h1>Welcome</h1>
+            <h2>to the</h2>
+            <h1>Aboriginal Museum</h1>
+            <div class = "arrow img">
+                <img src="images/arrow.png" alt="An arrow image to click" width="300" height="150">
+            </div>
+        </div>
+
+        <div id = "welcome_message">
+            <b>Minyahgu, Jimbelung... Or should I say:' G'day, mate'?</b>
+            <b>May I have your name please?</b>
+            <input id='username' type="text" name="playerName" placeholder="Enter your name here"  onfocus="this.placeholder=''" 
+            onblur="this.placeholder = 'Enter your name here'" onkeydown="saveName(this)" required>
+            <button onclick="amReady()">I'm ready!</button>
+        </div>
+        <script src = "js/welcome_page.js"></script>
+    </body>
+</html>

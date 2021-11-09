@@ -1,0 +1,30 @@
+body{
+    margin:0;
+	text-align: center;
+    background: url(../images/gw.jpg) fixed;
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+	-moz-background-size:100% 100%;
+}
+
+div{
+    margin-top:250px;
+    margin-left: 25%;
+    background: burlywood;
+    width: 50%;
+    border: 3px black solid;
+}
+
+div h3{
+    margin-top: 3vw;
+}
+
+button {
+    font-size: 15px;
+    border: none;
+    padding: 1vw;
+    background:#FF9030;
+    color:black;
+    font-weight: 800;
+    margin: 1vw 0 20px 0;
+}

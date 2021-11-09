@@ -1,0 +1,127 @@
+body{
+    text-align: center;
+    /* background: url(../images/dictionary.webp) fixed;
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    -moz-background-size:100% 100%; */
+    background: Beige;
+} 
+
+.dictionary {
+    margin-top: 1vw;
+    height: 700px;
+    overflow: scroll;
+}
+
+button {
+    font-size: 18px;
+    border: none;
+    padding: 1vw;
+    margin: 3px;
+    background:black;
+    color:white;
+}
+
+#search_bar {
+    border: 1px solid black;
+    padding: 12px 20px;
+}
+
+#words_list {
+    list-style: none;
+    padding: 0;
+    background-color: gray;
+    width: 40%;
+    margin-left: 30%;
+}
+
+#words_list li {
+    font-size: 20px;
+    border-bottom: 2px black solid;
+}
+
+@keyframes zoomout {
+    0% {
+        transform: scale(0.2,0.2);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+
+#congrat_form {
+    display: none;
+    position: fixed;
+    border: 3px brown solid;
+    z-index: 5;
+    background-color:bisque;
+    border-radius: 30px;
+    width: 65%;
+    height: 23%;
+    margin-top: 5vw;
+    margin-left: 17%;
+    border-radius: 3%;
+    text-align: center;
+    animation: zoomout 1s ease;
+}
+
+#congrat_form h2 {
+    margin-top: 4vw;
+}
+
+#congrat_form h4 {
+    font-size: 18px;
+    margin-top: 5vw;
+}
+
+#congrat_form button {
+    margin-top: 5vw;
+}
+
+#preview {
+    border: 5px burlywood solid;
+    background-color: white;    
+}
+
+#scanner_container {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+#warn{
+    display: none;
+}
+
+@media screen and (orientation:landscape) {
+    @keyframes popup {
+        0% {
+            transform: scale(0,0); opacity: 0;
+        }
+        20% {
+            opacity: 0.2;
+        }
+        100% {
+            transform: scale(1,1);
+        }
+    }
+
+    #scanner_container {
+        z-index: 1;
+    }
+
+    #warn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        z-index: 9;
+        border: 3px bisque solid;
+        background-color: bisque;
+        width: 70%;
+        margin-left: 15%;
+        height: 55%;
+        animation: popup 1.2s ease forwards;
+        border-radius: 1%;
+    }
+}

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Word Guessing</title>
+        <link rel="stylesheet" href="css/gw_style.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    </head>
+
+    <body>
+        <header class="header">
+            <ul class="header_ul">
+                <li class="burger">
+                    <div class="container" onclick="openHamburger(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </li>
+                <li>
+                    <a>
+                        <h2>Guess the Word</h2>
+                    </a>
+                </li>
+            </ul>
+        </header>
+        
+        <aside id="hamburger_ul" class="hamburger_side">
+            <p>Dictionary</p>
+            <input type="text" id="search_bar" onkeyup="searchWord()" placeholder="Search for words...">
+            <ul id="words_list">
+    
+            </ul>
+        </aside>
+
+        <main class="main">
+            <div class="content">
+                <div class="hint_container">
+                    <h2 id="abo"></h2>
+                    <h4 id="pronun"></h4>
+                </div>
+
+                <div class="next_container">
+                    <h4 id="score"></h4>
+                    <button type="button" id="next_btn" onclick="nextbtn()">Next</button>
+                </div>
+
+                <section class="options">
+                    <button type="button" id="btn1" onclick="verify(this.id)" class="btn1"></button>
+                    <button type="button" id="btn2" onclick="verify(this.id)"  class="btn1"></button>
+                    <button type="button" id="btn3" onclick="verify(this.id)"  class="btn1"></button>
+                </section>    
+            </div>      
+        </main>
+
+        <div id="correct_pop_up">
+            <h1>Correct!</h1>
+            <h3>Click the "Next" button to continue</h3>
+            <button type="button" id="btn_in_correct" class="close_btn" onclick="nextbtn()">Next</button>
+        </div>
+
+        <div id="wrong_pop_up">
+            <h1>Wrong!</h1>
+            <h3>The correct answer is:</h3>
+            <h4 id="english"></h4>
+            <button type="button" id="btn_in_wrong" class="close_btn" onclick="closeForm(this.id)">Close</button>
+        </div>
+
+        <div id="common_pop_up">
+            <h1 id="ctitle"></h1>
+            <h3 id="ccontent"></h3>
+            <button id="cbtn"></button>
+        </div>
+
+        <div class="background">
+            <img>
+        </div>
+        
+        <script type="text/javascript" src="/js/filter.js"></script>
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/guessword.js"></script>
+    </body>
+</html>
